@@ -47,6 +47,10 @@ module.exports = {
       selector: 'span[itemprop=offers] meta[itemprop=price]',
       attr: 'content',
       property: 'price'
+    },
+    {
+      selector: 'div[itemprop=description]',
+      property: 'description'
     }
   ]
 };
