@@ -16,6 +16,10 @@ exports.fetch = function(playId, lang, callback) {
   parse(playId, url, config, callback);
 };
 
+exports.setProxy = function setProxy(proxyUrl) {
+    _request = _request.defaults({proxy: proxyUrl});
+};
+
 exports.request = function(url, callback) {
   _request(url, callback);
 };
@@ -88,10 +92,14 @@ var parse = function(playId, url, config, callback) {
         ? match.attr(selector.attr)
         : match.text().trim();
 
-      if(selector.property === 'categories' && match.attr && match.attr(selector.attr)){
-          var categoryURI = match.attr(selector.attr).href;
-          var arr = categoryURI.split("/");
-          val = arr.slice(-1)[0];
+      if(selector.property === 'categories' && match.length > 0){
+          val = [];
+
+          match.each(function(i, elem) {
+              var categoryURI = this.attribs.href;
+              var arr = categoryURI.split("/");
+              val.push(arr.slice(-1)[0]);
+          });
       }
 
       result[selector.property] = val;

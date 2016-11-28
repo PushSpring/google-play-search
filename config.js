@@ -19,6 +19,7 @@ module.exports = {
     },
     {
       selector: '.document-subtitle.category',
+      attr: 'href',
       property: 'categories'
     },
     {
