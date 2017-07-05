@@ -52,6 +52,10 @@ module.exports = {
     {
       selector: 'div[itemprop=description]',
       property: 'description'
+    },
+    {
+      selector: 'span[class=ads-supported-label-msg]',
+      property: 'containsAds'
     }
   ]
 };
