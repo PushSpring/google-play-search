@@ -3,6 +3,7 @@ var _request = require('request');
 var parser = require('whacko');
 var config = require('./config');
 var constants = require('./constants');
+var urllib = require('url');
 
 exports.TopAppsCategories = constants.TopAppsCategories;
 exports.TopAppsCollections = constants.TopAppsCollections;
@@ -107,11 +108,11 @@ var parse = function(playId, url, config, callback) {
 
     // Unwrap urls  
     if (result.developerWebsite) {
-        result.developerWebsite = url.parse(result.developerWebsite, true).query.q;
+        result.developerWebsite = urllib.parse(result.developerWebsite, true).query.q;
     }  
 
     if (result.privacyPolicy) {
-          result.privacyPolicy = url.parse(result.privacyPolicy, true).query.q;
+          result.privacyPolicy = urllib.parse(result.privacyPolicy, true).query.q;
     }  
       
     callback(null, result);
