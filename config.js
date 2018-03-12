@@ -56,6 +56,11 @@ module.exports = {
     {
       selector: 'span[class=ads-supported-label-msg]',
       property: 'containsAds'
+    },
+    {
+      selector: '.dev-link[href^="http"]',
+      property: 'company_url'
+
     }
   ]
 };
