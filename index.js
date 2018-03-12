@@ -104,9 +104,14 @@ var parse = function(playId, url, config, callback) {
 
       result[selector.property] = val;
     });
-    
-    if (result.company_url) {
-        result.company_url = url.parse(result.company_url, true).query.q;
+
+    // Unwrap urls  
+    if (result.developerWebsite) {
+        result.developerWebsite = url.parse(result.developerWebsite, true).query.q;
+    }  
+
+    if (result.privacyPolicy) {
+          result.privacyPolicy = url.parse(result.privacyPolicy, true).query.q;
     }  
       
     callback(null, result);
