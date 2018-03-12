@@ -58,9 +58,19 @@ module.exports = {
       property: 'containsAds'
     },
     {
-      selector: '.dev-link[href^="http"]',
-      property: 'company_url'
-
+      selector: '.dev-link:contains("Visit website")',
+      property: 'developerWebsite',
+      attr: 'href'
+    },
+    {
+      selector: '.dev-link:contains("Email")',
+      property: 'developerEmail',
+      attr: 'href'
+    },
+    {
+      selector: '.dev-link:contains("Privacy Policy")',
+      property: 'privacyPolicy',
+      attr: 'href'
     }
   ]
 };

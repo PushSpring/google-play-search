@@ -23,5 +23,13 @@ describe('Parsing tests', function () {
       assert.equal(res.categories.length, 2);
       done();
     });
-  })
+  });
+
+  it('should read developer website', function(done) {
+    search.fetch('com.jabstone.jabtalk.basic', function(err, res) {
+      // console.log(res);
+      assert.equal(res.developerWebsite, 'https://www.google.com/url?q=http://www.jabstone.com&sa=D&usg=AFQjCNG_IjJDRjyYmxDmZS90N7GiDXXvCA');
+      done();
+    });
+  });
 });
