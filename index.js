@@ -105,15 +105,6 @@ var parse = function(playId, url, config, callback) {
 
       result[selector.property] = val;
     });
-
-    // Unwrap urls  
-    if (result.developerWebsite) {
-        result.developerWebsite = urllib.parse(result.developerWebsite, true).query.q;
-    }  
-
-    if (result.privacyPolicy) {
-          result.privacyPolicy = urllib.parse(result.privacyPolicy, true).query.q;
-    }  
       
     callback(null, result);
   });

@@ -5,43 +5,41 @@ module.exports = {
   mainSelector: '',
   selectors: [
     {
-      selector: '.document-title[itemprop=name]',
+      selector: '.AHFaub[itemprop=name]',
       property: 'name'
     },
     {
-      selector: '.document-subtitle.primary span[itemprop=name]',
+      selector: '.jdjqLd .ZVWMWc .i4sPve span:first-of-type',
       property: 'developer'
     },
     {
-      selector: '.cover-image[itemprop=image]',
+      selector: '.ujDFqe[itemprop=image]',
       attr: 'src',
       property: 'icon'
     },
     {
-      selector: '.document-subtitle.category',
+      selector: 'a[itemprop=genre]',
       attr: 'href',
       property: 'categories'
     },
     {
-      selector: 'meta[itemprop=ratingValue]',
-      attr: 'content',
+      selector: '.BHMmbe',
       property: 'rating'
     },
     {
-      selector: 'meta[itemprop=ratingCount]',
-      attr: 'content',
+      selector: '.AYi5wd span',
       property: 'ratingCount'
     },
     {
-      selector: '.meta-info .content[itemprop=operatingSystems]',
+      selector: 'div:contains("Requires Android") + span',
       property: 'requiredOS'
     },
     {
-      selector: '.meta-info .content[itemprop=softwareVersion]',
+      selector: 'div:contains("Current Version") + span',
       property: 'softwareVersion'
     },
     {
-      selector: '.meta-info .content[itemprop=contentRating]',
+      selector: 'div:contains("Content Rating") + .htlgb .htlgb div:first-of-type',
       property: 'contentRating'
     },
     {
@@ -54,21 +52,21 @@ module.exports = {
       property: 'description'
     },
     {
-      selector: 'span[class=ads-supported-label-msg]',
+      selector: '.rxic6',
       property: 'containsAds'
     },
     {
-      selector: '.dev-link:contains("Visit website")',
+      selector: 'a:contains("Visit website")',
       property: 'developerWebsite',
       attr: 'href'
     },
     {
-      selector: '.dev-link:contains("Email")',
+      selector: 'a:contains("@")',
       property: 'developerEmail',
       attr: 'href'
     },
     {
-      selector: '.dev-link:contains("Privacy Policy")',
+      selector: 'a:contains("Privacy Policy")',
       property: 'privacyPolicy',
       attr: 'href'
     }
