@@ -1,6 +1,6 @@
 var util = require('util');
 var _request = require('request');
-var parser = require('whacko');
+var parser = require('cheerio');
 var config = require('./config');
 var constants = require('./constants');
 var urllib = require('url');
