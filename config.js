@@ -5,15 +5,15 @@ module.exports = {
   mainSelector: '',
   selectors: [
     {
-      selector: '.AHFaub[itemprop=name]',
+      selector: 'h1[itemprop=name]',
       property: 'name'
     },
     {
-      selector: '.jdjqLd .ZVWMWc .i4sPve span:first-of-type',
+      selector: 'div:contains("Offered By") + span',
       property: 'developer'
     },
     {
-      selector: '.ujDFqe[itemprop=image]',
+      selector: 'img[itemprop=image]',
       attr: 'src',
       property: 'icon'
     },
@@ -23,11 +23,11 @@ module.exports = {
       property: 'categories'
     },
     {
-      selector: '.BHMmbe',
+      selector: 'div[aria-label^="Rated"]',
       property: 'rating'
     },
     {
-      selector: '.AYi5wd span',
+      selector: 'span[aria-label$="ratings"]:first-of-type',
       property: 'ratingCount'
     },
     {
@@ -39,7 +39,7 @@ module.exports = {
       property: 'softwareVersion'
     },
     {
-      selector: 'div:contains("Content Rating") + .htlgb .htlgb div:first-of-type',
+      selector: 'div:contains("Content Rating") + span div:first-child span:first-child div:first-child',
       property: 'contentRating'
     },
     {
@@ -52,7 +52,7 @@ module.exports = {
       property: 'description'
     },
     {
-      selector: '.rxic6',
+      selector: ':contains("Contains Ads")',
       property: 'containsAds'
     },
     {
@@ -69,6 +69,11 @@ module.exports = {
       selector: 'a:contains("Privacy Policy")',
       property: 'privacyPolicy',
       attr: 'href'
+    },
+    {
+      selector: 'img[alt^="Targeted"]',
+      property: 'targetAge',
+      attr: 'alt'
     }
   ]
 };
