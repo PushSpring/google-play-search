@@ -1,6 +1,6 @@
 {
   "name": "@pushspring/google-play-search",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Crawls Google Play store apps website, returning results as JSON",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
+    "cheerio": "^1.0.0-rc.3",
     "request": "~2.88.0"
   },
   "devDependencies": {
