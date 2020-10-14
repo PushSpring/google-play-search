@@ -4,8 +4,8 @@ var search = require('./');
 describe('Parsing tests', function () {
   it('should read app details from Google Play store', function(done) {
     search.fetch('com.google.android.music', function(err, res) {
-      assert.equal(res.name, 'Google Play Music');
-      assert.equal(res.categories[0], 'MUSIC_AND_AUDIO');
+      assert.strictEqual(res.name, "Google Play Music");
+      assert.strictEqual(res.categories[0], "MUSIC_AND_AUDIO");
       done();
     });
   });
@@ -19,8 +19,10 @@ describe('Parsing tests', function () {
   });
 
   it('should read categories', function(done) {
-    search.fetch('com.jabstone.jabtalk.basic', function(err, res) {
-      assert.equal(res.categories.length, 2);
+    search.fetch("com.instagram.android", function (err, res) {
+      // console.log(res);
+      assert.strictEqual(res.categories.length, 1);
+      assert.strictEqual(res.categories[0], "SOCIAL");
       done();
     });
   });
@@ -28,7 +30,15 @@ describe('Parsing tests', function () {
   it('should read developer website', function(done) {
     search.fetch('com.jabstone.jabtalk.basic', function(err, res) {
       //console.log(res);
-      assert.equal(res.developerWebsite, 'http://www.jabstone.com');
+      assert.strictEqual(res.developerWebsite, "http://www.jabstone.com");
+      done();
+    });
+  });
+
+  it("should read target age", function (done) {
+    search.fetch("com.tocaboca.tocakitchen2", function (err, res) {
+      // console.log(res);
+      assert.strictEqual(res.targetAge, "Ages 6-8");
       done();
     });
   });

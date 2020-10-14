@@ -71,9 +71,8 @@ module.exports = {
       attr: 'href'
     },
     {
-      selector: 'img[alt^="Targeted"]',
+      selector: 'img[alt^="Approved by teachers for"] + span',
       property: 'targetAge',
-      attr: 'alt'
     }
   ]
 };
