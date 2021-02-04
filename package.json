@@ -4,7 +4,8 @@
   "description": "Crawls Google Play store apps website, returning results as JSON",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha -R spec"
+    "test": "node_modules/.bin/mocha -R spec",
+    "publish-github": "npm login --scope=@pushspring --registry=https://npm.pkg.github.com"
   },
   "author": {
     "name": "Mikko Lehtinen",
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mikkolehtinen/google-play-search"
+    "url": "git://github.com/pushspring/google-play-search"
   },
   "keywords": [
     "googleplay",
@@ -31,6 +32,6 @@
   },
   "readmeFilename": "readme.md",
   "bugs": {
-    "url": "https://github.com/mikkolehtinen/google-play-search/issues"
+    "url": "https://github.com/pushspring/google-play-search/issues"
   }
 }
